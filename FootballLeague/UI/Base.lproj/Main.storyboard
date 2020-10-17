@@ -24,21 +24,36 @@
             </objects>
             <point key="canvasLocation" x="182" y="329"/>
         </scene>
-        <!--Home-->
+        <!--HomeVC-->
         <scene sceneID="U23-7z-Nmz">
             <objects>
-                <viewController id="dbh-bx-gkG" customClass="HomeVC" customModule="FootballLeague" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dbh-bx-gkG" customClass="HomeVC" customModule="FootballLeague" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="imi-6w-4Ti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Iv-fF-5Oz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="h1M-n4-ATw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Iv-fF-5Oz" firstAttribute="trailing" secondItem="h1M-n4-ATw" secondAttribute="trailing" id="1r8-e5-tOl"/>
+                            <constraint firstItem="5Iv-fF-5Oz" firstAttribute="top" secondItem="h1M-n4-ATw" secondAttribute="top" id="9AV-B2-shK"/>
+                            <constraint firstItem="5Iv-fF-5Oz" firstAttribute="bottom" secondItem="h1M-n4-ATw" secondAttribute="bottom" id="Xfb-ge-XV9"/>
+                            <constraint firstItem="5Iv-fF-5Oz" firstAttribute="leading" secondItem="h1M-n4-ATw" secondAttribute="leading" id="gA8-Ta-JgW"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="NIV-xS-Q36"/>
+                    <navigationItem key="navigationItem" id="fvi-jt-bxf"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Iv-fF-5Oz" id="TJN-Xt-uOJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAq-yQ-rih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181" y="-399"/>
+            <point key="canvasLocation" x="1089.8550724637682" y="-399.10714285714283"/>
         </scene>
         <!--Flashy Tab Bar Controller-->
         <scene sceneID="bwO-3a-WhA">
@@ -55,13 +70,33 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="dbh-bx-gkG" kind="relationship" relationship="viewControllers" id="OZ6-RI-Utx"/>
+                        <segue destination="lE3-RD-dls" kind="relationship" relationship="viewControllers" id="OZ6-RI-Utx"/>
                         <segue destination="c5j-X5-YpP" kind="relationship" relationship="viewControllers" id="3Nk-AA-dG7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRx-1C-Xks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-706" y="26"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="CFw-8n-wbO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lE3-RD-dls" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="NIV-xS-Q36"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Mp-cG-ccr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1764705882352941" green="0.28627450980392155" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dbh-bx-gkG" kind="relationship" relationship="rootViewController" id="s30-tm-VxK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAI-NN-zQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="-399.10714285714283"/>
         </scene>
     </scenes>
     <resources>
