@@ -8,10 +8,12 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    var competiton: CompetitionTeamsVM!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        CompetitionTeamsVM.getCompetitionTeams(teamID: 20001) { responce in
+            
+        }
     }
 
 
