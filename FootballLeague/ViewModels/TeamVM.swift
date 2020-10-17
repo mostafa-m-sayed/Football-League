@@ -46,7 +46,7 @@ struct TeamVM {
         return team.clubColors ?? ""
     }
     var venue: String {
-        return team.venue ?? ""
+        return team.venue ?? "--"
     }
     var lastUpdated: String {
         return team.lastUpdated ?? ""

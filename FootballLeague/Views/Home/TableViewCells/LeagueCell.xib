@@ -133,6 +133,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="PzQ-ot-VAC" id="9PU-1g-E0i"/>
+                <outlet property="tlaLabel" destination="u6e-ZR-zvZ" id="ceN-jJ-Apq"/>
+                <outlet property="venuLabel" destination="tPM-OC-K3s" id="WEc-Kv-9o7"/>
+                <outlet property="websiteLabel" destination="MZb-ox-DWu" id="nYD-Kl-UI8"/>
+            </connections>
             <point key="canvasLocation" x="76.08695652173914" y="127.90178571428571"/>
         </tableViewCell>
     </objects>

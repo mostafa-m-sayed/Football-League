@@ -10,5 +10,4 @@ struct Season: Codable {
     var id:Int?
     var startDate:String?
     var endDate:String?
-    var currentMatchday:String?
 }
