@@ -24,6 +24,14 @@
 		277F7CB0253A7506009B1E7C /* CompetitionTeams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CAF253A7506009B1E7C /* CompetitionTeams.swift */; };
 		277F7CBB253A78BE009B1E7C /* CompetitionTeamsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CBA253A78BE009B1E7C /* CompetitionTeamsVM.swift */; };
 		277F7CE3253A7D0B009B1E7C /* ServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CE2253A7D0B009B1E7C /* ServiceBase.swift */; };
+		277F7CF1253A8A9E009B1E7C /* CBTabItemBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CEB253A8A9D009B1E7C /* CBTabItemBasicAnimation.swift */; };
+		277F7CF2253A8A9E009B1E7C /* CBFlashyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CEC253A8A9D009B1E7C /* CBFlashyTabBar.swift */; };
+		277F7CF3253A8A9E009B1E7C /* CBFlashyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CED253A8A9E009B1E7C /* CBFlashyTabBarController.swift */; };
+		277F7CF4253A8A9E009B1E7C /* CBTabItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CEE253A8A9E009B1E7C /* CBTabItemAnimation.swift */; };
+		277F7CF5253A8A9E009B1E7C /* CBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CEF253A8A9E009B1E7C /* CBTabBarButton.swift */; };
+		277F7CF6253A8A9E009B1E7C /* CBTabItemDeselectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CF0253A8A9E009B1E7C /* CBTabItemDeselectAnimation.swift */; };
+		277F7CFB253A8B1D009B1E7C /* CBTabItemSelectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CFA253A8B1D009B1E7C /* CBTabItemSelectAnimation.swift */; };
+		277F7D00253A8C74009B1E7C /* MainTB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7CFF253A8C74009B1E7C /* MainTB.swift */; };
 		3AA3FF4AF95FFA81F40C692B /* Pods_FootballLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4951B0198C2611AE06CB7C2 /* Pods_FootballLeague.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +76,14 @@
 		277F7CAF253A7506009B1E7C /* CompetitionTeams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTeams.swift; sourceTree = "<group>"; };
 		277F7CBA253A78BE009B1E7C /* CompetitionTeamsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTeamsVM.swift; sourceTree = "<group>"; };
 		277F7CE2253A7D0B009B1E7C /* ServiceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBase.swift; sourceTree = "<group>"; };
+		277F7CEB253A8A9D009B1E7C /* CBTabItemBasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabItemBasicAnimation.swift; sourceTree = "<group>"; };
+		277F7CEC253A8A9D009B1E7C /* CBFlashyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBFlashyTabBar.swift; sourceTree = "<group>"; };
+		277F7CED253A8A9E009B1E7C /* CBFlashyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBFlashyTabBarController.swift; sourceTree = "<group>"; };
+		277F7CEE253A8A9E009B1E7C /* CBTabItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabItemAnimation.swift; sourceTree = "<group>"; };
+		277F7CEF253A8A9E009B1E7C /* CBTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabBarButton.swift; sourceTree = "<group>"; };
+		277F7CF0253A8A9E009B1E7C /* CBTabItemDeselectAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabItemDeselectAnimation.swift; sourceTree = "<group>"; };
+		277F7CFA253A8B1D009B1E7C /* CBTabItemSelectAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabItemSelectAnimation.swift; sourceTree = "<group>"; };
+		277F7CFF253A8C74009B1E7C /* MainTB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTB.swift; path = FootballLeague/Views/MainTB.swift; sourceTree = SOURCE_ROOT; };
 		43E3C77439A4E297E8EF126B /* Pods-FootballLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballLeague.release.xcconfig"; path = "Target Support Files/Pods-FootballLeague/Pods-FootballLeague.release.xcconfig"; sourceTree = "<group>"; };
 		71A46559A0CEAFD36E77C499 /* Pods-FootballLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballLeague.debug.xcconfig"; path = "Target Support Files/Pods-FootballLeague/Pods-FootballLeague.debug.xcconfig"; sourceTree = "<group>"; };
 		B4951B0198C2611AE06CB7C2 /* Pods_FootballLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +140,7 @@
 		277F7B8E253A5A34009B1E7C /* FootballLeague */ = {
 			isa = PBXGroup;
 			children = (
+				277F7CEA253A8A8D009B1E7C /* CBFlashyTabBar */,
 				277F7CE1253A7CFA009B1E7C /* NetworkManager */,
 				277F7C89253A65D5009B1E7C /* Extensions */,
 				277F7C33253A6102009B1E7C /* Controllers */,
@@ -190,6 +207,7 @@
 			children = (
 				277F7C9A253A68C5009B1E7C /* TeamVM.swift */,
 				277F7CBA253A78BE009B1E7C /* CompetitionTeamsVM.swift */,
+				277F7CFF253A8C74009B1E7C /* MainTB.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -216,6 +234,20 @@
 				277F7CE2253A7D0B009B1E7C /* ServiceBase.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		277F7CEA253A8A8D009B1E7C /* CBFlashyTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				277F7CFA253A8B1D009B1E7C /* CBTabItemSelectAnimation.swift */,
+				277F7CEC253A8A9D009B1E7C /* CBFlashyTabBar.swift */,
+				277F7CED253A8A9E009B1E7C /* CBFlashyTabBarController.swift */,
+				277F7CEF253A8A9E009B1E7C /* CBTabBarButton.swift */,
+				277F7CEE253A8A9E009B1E7C /* CBTabItemAnimation.swift */,
+				277F7CEB253A8A9D009B1E7C /* CBTabItemBasicAnimation.swift */,
+				277F7CF0253A8A9E009B1E7C /* CBTabItemDeselectAnimation.swift */,
+			);
+			path = CBFlashyTabBar;
 			sourceTree = "<group>";
 		};
 		66A63C481BB5625DC3E69A47 /* Pods */ = {
@@ -412,14 +444,22 @@
 				277F7CA6253A7251009B1E7C /* Season.swift in Sources */,
 				277F7B94253A5A34009B1E7C /* HomeVC.swift in Sources */,
 				277F7CB0253A7506009B1E7C /* CompetitionTeams.swift in Sources */,
+				277F7CF3253A8A9E009B1E7C /* CBFlashyTabBarController.swift in Sources */,
+				277F7CF6253A8A9E009B1E7C /* CBTabItemDeselectAnimation.swift in Sources */,
 				277F7CAB253A73B8009B1E7C /* Competition.swift in Sources */,
+				277F7D00253A8C74009B1E7C /* MainTB.swift in Sources */,
 				277F7CA0253A6D8A009B1E7C /* Area.swift in Sources */,
+				277F7CF1253A8A9E009B1E7C /* CBTabItemBasicAnimation.swift in Sources */,
 				277F7C9B253A68C5009B1E7C /* TeamVM.swift in Sources */,
 				277F7C8E253A6796009B1E7C /* ColorExt.swift in Sources */,
 				277F7B90253A5A34009B1E7C /* AppDelegate.swift in Sources */,
+				277F7CF2253A8A9E009B1E7C /* CBFlashyTabBar.swift in Sources */,
+				277F7CFB253A8B1D009B1E7C /* CBTabItemSelectAnimation.swift in Sources */,
 				277F7CE3253A7D0B009B1E7C /* ServiceBase.swift in Sources */,
 				277F7C96253A6868009B1E7C /* Team.swift in Sources */,
 				277F7CBB253A78BE009B1E7C /* CompetitionTeamsVM.swift in Sources */,
+				277F7CF4253A8A9E009B1E7C /* CBTabItemAnimation.swift in Sources */,
+				277F7CF5253A8A9E009B1E7C /* CBTabBarButton.swift in Sources */,
 				277F7B92253A5A34009B1E7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

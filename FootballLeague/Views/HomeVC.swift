@@ -11,7 +11,7 @@ class HomeVC: UIViewController {
     var competiton: CompetitionTeamsVM!
     override func viewDidLoad() {
         super.viewDidLoad()
-        CompetitionTeamsVM.getCompetitionTeams(teamID: 20001) { responce in
+        CompetitionTeamsVM.getCompetitionTeams(teamID: 2000) { responce in
             
         }
     }
