@@ -1,24 +1,27 @@
 //
-//  ViewController.swift
+//  FavouritesVC.swift
 //  FootballLeague
 //
-//  Created by Mostafa Sayed on 17/10/2020.
+//  Created by Mostafa Sayed on 10/18/20.
 //
 
 import UIKit
-import Spruce
 
-class HomeVC: UIViewController {
-    
+class FavouritesVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var competiton: CompetitionTeamsVM?
+    var favourites: [TeamVM]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        navigationController?.initNavigationBar(title: "Football League", show: true)
-        loadData()
+        navigationController?.initNavigationBar(title: "Favourites", show: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getData()
+        tableView.reloadData()
     }
     
     func setupTableView() {
@@ -27,32 +30,28 @@ class HomeVC: UIViewController {
         tableView.tableFooterView = UIView()
     }
     
-    func loadData()  {
-        CompetitionTeamsVM.getCompetitionTeams(teamID: 2000) { result,error  in
-            if result != nil {
-                self.competiton = result
-                self.tableView.reloadData()
-                self.animateView()
-            }
-        }
-    }
-    
     func animateView() {
         self.tableView.spruce.animate([.slide(.up, .byPoints(-20))], duration: 0.2, completion: nil)
         self.view.spruce.animate([.slide(.up, .byPoints(-30))], duration: 0.4, completion: nil)
     }
+    
+    func getData() {
+        favourites = TeamVM.getFavourites()
+        animateView()
+    }
 }
-
-extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+extension FavouritesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.competiton?.teams.count ?? 0
+        return self.favourites?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueCell", for: indexPath) as! LeagueCell
-        if let competiton = competiton {
-            cell.team = competiton.teams[indexPath.row]
+        
+        if let favourites = favourites {
+            cell.team = favourites[indexPath.row]
         }
+        
         return cell
     }
     
