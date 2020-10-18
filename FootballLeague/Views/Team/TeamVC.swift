@@ -24,10 +24,10 @@ class TeamVC: UIViewController {
     var team: TeamVM?
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.initNavigationBar(title: teamName, show: true)
         addGestures()
         team = TeamVM(team: Team())
         getData()
+        initNavBar()
         collectionView.register(UINib(nibName: "PlayerCollectionCell", bundle: nil), forCellWithReuseIdentifier: "PlayerCollectionCell")
         collectionView.register(UINib(nibName: "CompetetionCollectionCell", bundle: nil), forCellWithReuseIdentifier: "CompetetionCollectionCell")
     }
@@ -66,12 +66,13 @@ class TeamVC: UIViewController {
         let playerGesture = UITapGestureRecognizer(target: self, action: #selector(playersTabbed))
         playersView.addGestureRecognizer(playerGesture)
     }
+    
+    func initNavBar() {
+        self.navigationController?.initNavigationBar()
+        self.navigationItem.title = teamName
+    }
 }
 
-enum TeamActiveTab {
-    case competetions
-    case players
-}
 extension TeamVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return activeTab == .players ? (team?.players.count ?? 0) : (team?.activeCompetetion.count ?? 0)
@@ -92,4 +93,9 @@ extension TeamVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let collectionSize = collectionView.frame.size
         return CGSize(width: collectionSize.width / 2.1, height: activeTab == .players ? 190 : 170)
     }
+}
+
+enum TeamActiveTab {
+    case competetions
+    case players
 }

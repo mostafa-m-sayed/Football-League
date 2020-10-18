@@ -7,9 +7,9 @@
 
 import UIKit
 extension UINavigationController {
-    func initNavigationBar(title: String?, show: Bool) {
+    func initNavigationBar() {
         navigationBar.tintColor = UIColor.white
         let titleDict = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font:UIFont.italicSystemFont(ofSize: 20)]
-        self.navigationController?.navigationBar.titleTextAttributes = titleDict
+        self.navigationBar.titleTextAttributes = titleDict
     }
 }

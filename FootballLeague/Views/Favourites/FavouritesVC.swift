@@ -15,7 +15,7 @@ class FavouritesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        navigationController?.initNavigationBar(title: "Favourites", show: true)
+        navigationController?.initNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {

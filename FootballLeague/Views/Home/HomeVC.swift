@@ -17,7 +17,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        navigationController?.initNavigationBar(title: "Football League", show: true)
+        navigationController?.initNavigationBar()
         loadData()
     }
     
@@ -60,6 +60,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let nextVC = storyboard?.instantiateViewController(identifier: "TeamVC") as! TeamVC
         if let competiton = competiton {
             nextVC.teamId = competiton.teams[indexPath.row].id
+            nextVC.teamName = competiton.teams[indexPath.row].name
         }
         navigationController?.pushViewController(nextVC, animated: true)
     }
