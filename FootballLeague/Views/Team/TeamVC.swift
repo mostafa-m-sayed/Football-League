@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
 class TeamVC: UIViewController {
 
@@ -39,6 +40,9 @@ class TeamVC: UIViewController {
                 self.team = team
                 self.noDataVisibility()
                 self.collectionView.reloadData()
+            } else {
+                let banner = NotificationBanner(title: "Error", subtitle: error ?? "Unknown error", style: .danger)
+                banner.show()
             }
         }
     }
@@ -84,7 +88,6 @@ class TeamVC: UIViewController {
             noDataLabel.isHidden = team.activeCompetetion.count != 0
             collectionView.isHidden = team.activeCompetetion.count == 0
         }
-        
     }
 }
 

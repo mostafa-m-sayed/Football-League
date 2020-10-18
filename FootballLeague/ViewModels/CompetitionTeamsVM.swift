@@ -36,11 +36,24 @@ struct CompetitionTeamsVM {
                         }
                     }
                 case.failure(let error):
-                    print(error)
+                    switch error {
+                        case let .sessionTaskFailed(sessionError):
+                            if let urlError = sessionError as? URLError {
+                                if urlError.code == .notConnectedToInternet {
+                                    completion(nil, "No internet connection", false)
+                                } else {
+                                    completion(nil, urlError.localizedDescription, false)
+                                }
+                            }else {
+                                completion(nil, sessionError.localizedDescription, false)
+                            }
+                        default:
+                            completion(nil, "Unknown error", false)
+                    }
             }
         }
     }
-
+    
     func parseError(data: NSDictionary) {
         
     }

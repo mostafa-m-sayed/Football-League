@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import NotificationBannerSwift
+
 protocol TeamFavouriteDelegate: class {
     func favouriteTapped()
 }
@@ -37,7 +39,7 @@ class LeagueCell: UITableViewCell {
         tlaLabel.text = team.tla
         venuLabel.text = team.venue
         favouriteButton.setImage(UIImage(systemName: team.isFavourite ? "heart.fill" : "heart"), for: .normal)
-
+        
         for view in self.colorsStack.subviews {
             view.removeFromSuperview()
         }
@@ -53,6 +55,12 @@ class LeagueCell: UITableViewCell {
         guard let team = team else { return }
         favouriteButton.setImage(UIImage(systemName: team.isFavourite ?  "heart": "heart.fill"), for: .normal)
         team.isFavourite ? team.removeFavourite() : team.addToFavourites()
+        showFavBanner(added: team.isFavourite)
         delegate?.favouriteTapped()
+    }
+    
+    func showFavBanner(added: Bool) {
+        let banner = NotificationBanner(title: "Success", subtitle: added ? "Added to favourites" : "Removed from favourites", style: .success)
+        banner.show()
     }
 }

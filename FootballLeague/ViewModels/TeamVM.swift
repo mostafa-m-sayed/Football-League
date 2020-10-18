@@ -96,7 +96,20 @@ struct TeamVM {
                         }
                     }
                 case.failure(let error):
-                    print(error)
+                    switch error {
+                        case let .sessionTaskFailed(sessionError):
+                            if let urlError = sessionError as? URLError {
+                                if urlError.code == .notConnectedToInternet {
+                                    completion(nil, "No internet connection")
+                                } else {
+                                    completion(nil, urlError.localizedDescription)
+                                }
+                            }else {
+                                completion(nil, sessionError.localizedDescription)
+                            }
+                        default:
+                            completion(nil, "Unknown error")
+                    }
             }
         }
     }

@@ -36,7 +36,9 @@
                             <constraint firstItem="fmQ-95-qxi" firstAttribute="trailing" secondItem="NYJ-tj-HRE" secondAttribute="trailing" id="h4Z-nk-MTK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Favourites" id="ZXP-IB-Q0c"/>
+                    <navigationItem key="navigationItem" title="Favourites" id="ZXP-IB-Q0c">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XdP-QL-iHR"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="NYJ-tj-HRE" id="cUG-y2-zPt"/>
                     </connections>
@@ -217,7 +219,9 @@
                             <constraint firstItem="5Iv-fF-5Oz" firstAttribute="leading" secondItem="h1M-n4-ATw" secondAttribute="leading" id="gA8-Ta-JgW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Football League" id="fvi-jt-bxf"/>
+                    <navigationItem key="navigationItem" title="Football League" id="fvi-jt-bxf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="O6j-qA-Rhe"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="5Iv-fF-5Oz" id="TJN-Xt-uOJ"/>
                     </connections>

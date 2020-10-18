@@ -7,5 +7,6 @@ target 'FootballLeague' do
 
   pod 'Alamofire'
   pod "Spruce"
+  pod 'NotificationBannerSwift'
   end
 

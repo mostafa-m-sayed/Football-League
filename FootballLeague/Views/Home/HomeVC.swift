@@ -7,7 +7,7 @@
 
 import UIKit
 import Spruce
-
+import NotificationBannerSwift
 class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -39,6 +39,9 @@ class HomeVC: UIViewController {
                 if !cached {
                     self.animateView()
                 }
+            } else {
+                let banner = NotificationBanner(title: "Error", subtitle: error ?? "Unknown error", style: .danger)
+                banner.show()
             }
         }
     }
