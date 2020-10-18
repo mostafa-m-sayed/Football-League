@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+protocol TeamFavouriteDelegate: class {
+    func favouriteTapped()
+}
 class LeagueCell: UITableViewCell {
     
     @IBOutlet weak var colorsStack: UIStackView!
@@ -21,6 +23,8 @@ class LeagueCell: UITableViewCell {
             self.bindData()
         }
     }
+    
+    weak var delegate: TeamFavouriteDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,5 +53,6 @@ class LeagueCell: UITableViewCell {
         guard let team = team else { return }
         favouriteButton.setImage(UIImage(systemName: team.isFavourite ?  "heart": "heart.fill"), for: .normal)
         team.isFavourite ? team.removeFavourite() : team.addToFavourites()
+        delegate?.favouriteTapped()
     }
 }

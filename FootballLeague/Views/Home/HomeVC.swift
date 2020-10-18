@@ -18,6 +18,10 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         setupTableView()
         navigationController?.initNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadData()
     }
     
@@ -28,11 +32,13 @@ class HomeVC: UIViewController {
     }
     
     func loadData()  {
-        CompetitionTeamsVM.getCompetitionTeams(teamID: 2000) { result,error  in
+        CompetitionTeamsVM.getCompetitionTeams(competitionsId: 2000) { result, error, cached  in
             if result != nil {
                 self.competiton = result
                 self.tableView.reloadData()
-                self.animateView()
+                if !cached {
+                    self.animateView()
+                }
             }
         }
     }

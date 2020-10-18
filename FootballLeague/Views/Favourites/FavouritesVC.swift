@@ -21,7 +21,6 @@ class FavouritesVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getData()
-        tableView.reloadData()
     }
     
     func setupTableView() {
@@ -38,6 +37,7 @@ class FavouritesVC: UIViewController {
     func getData() {
         favourites = TeamVM.getFavourites()
         animateView()
+        tableView.reloadData()
     }
 }
 extension FavouritesVC: UITableViewDelegate, UITableViewDataSource {
@@ -50,12 +50,22 @@ extension FavouritesVC: UITableViewDelegate, UITableViewDataSource {
         
         if let favourites = favourites {
             cell.team = favourites[indexPath.row]
+            cell.delegate = self
         }
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let nextVC = storyboard?.instantiateViewController(identifier: "TeamVC") as! TeamVC
+        if let fav = favourites {
+            nextVC.teamId = fav[indexPath.row].id
+            nextVC.teamName = fav[indexPath.row].name
+        }
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+}
+extension FavouritesVC: TeamFavouriteDelegate {
+    func favouriteTapped() {
+        getData()
     }
 }

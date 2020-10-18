@@ -15,13 +15,13 @@ struct CompetitionTeamsVM {
         return teams.map{ TeamVM(team: $0) }
     }
     
-    static func getCompetitionTeams(teamID: Int, completion: @escaping (_ competition: CompetitionTeamsVM?, _ error: String?) -> Void) {
+    static func getCompetitionTeams(competitionsId: Int, completion: @escaping (_ competition: CompetitionTeamsVM?, _ error: String?, _ cached: Bool ) -> Void) {
         let header: HTTPHeaders  = ["X-Auth-Token": "eaab73f7a0cf4caca41e99306a4e04af"]
-        let url = ServiceBase.CompetitionTeams + "\(teamID)/teams"
+        let url = ServiceBase.CompetitionTeams + "\(competitionsId)/teams"
         
         if let data = FastCache(type: .competetion).get(url: url) {
             if let comp: CompetitionTeams = data.getObject() {
-                completion(CompetitionTeamsVM(competitionTeam: comp), nil)
+                completion(CompetitionTeamsVM(competitionTeam: comp), nil, true)
             }
         }
         
@@ -31,14 +31,17 @@ struct CompetitionTeamsVM {
                 case .success(let value):
                     if let val = value as? NSDictionary {
                         if let comp: CompetitionTeams = val.getObject() {
-                            completion(CompetitionTeamsVM(competitionTeam: comp), nil)
+                            completion(CompetitionTeamsVM(competitionTeam: comp), nil, false)
                             FastCache(type: .competetion).save(response: val, url: url)
                         }
                     }
                 case.failure(let error):
                     print(error)
             }
-            
         }
+    }
+
+    func parseError(data: NSDictionary) {
+        
     }
 }

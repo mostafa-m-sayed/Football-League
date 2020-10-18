@@ -9,6 +9,7 @@ import UIKit
 
 class TeamVC: UIViewController {
 
+    @IBOutlet weak var noDataLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var competetionsView: UIView!
     @IBOutlet weak var competetionsBarView: UIView!
@@ -36,6 +37,7 @@ class TeamVC: UIViewController {
         team?.getteam(teamID: String(teamId ?? 0)) {team, error in
             if team != nil {
                 self.team = team
+                self.noDataVisibility()
                 self.collectionView.reloadData()
             }
         }
@@ -56,6 +58,7 @@ class TeamVC: UIViewController {
         playersLabel.textColor = tab == .players ? UIColor(named: "Main") : UIColor.gray
         competetionsLabel.textColor = tab == .competetions ? UIColor(named: "Main") : UIColor.gray
         self.activeTab = tab
+        noDataVisibility()
         collectionView.reloadData()
     }
     
@@ -70,6 +73,18 @@ class TeamVC: UIViewController {
     func initNavBar() {
         self.navigationController?.initNavigationBar()
         self.navigationItem.title = teamName
+    }
+    
+    func noDataVisibility() {
+        guard let team = team else { return }
+        if activeTab == .players {
+            noDataLabel.isHidden = team.players.count != 0
+            collectionView.isHidden = team.players.count == 0
+        } else {
+            noDataLabel.isHidden = team.activeCompetetion.count != 0
+            collectionView.isHidden = team.activeCompetetion.count == 0
+        }
+        
     }
 }
 
@@ -89,6 +104,7 @@ extension TeamVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             return cell
         }
     }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionSize = collectionView.frame.size
         return CGSize(width: collectionSize.width / 2.1, height: activeTab == .players ? 190 : 170)
