@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqJ-f6-6Q6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favourit-->
+        <scene sceneID="xnY-3Z-oBv">
+            <objects>
+                <viewController id="c5j-X5-YpP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2cg-Tf-MBm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fmQ-95-qxi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favourit" image="favorite" id="ptS-hT-4bK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qew-Ja-hgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="329"/>
+        </scene>
+        <!--Football League-->
+        <scene sceneID="U23-7z-Nmz">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dbh-bx-gkG" customClass="HomeVC" customModule="FootballLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="imi-6w-4Ti">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Iv-fF-5Oz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h1M-n4-ATw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Iv-fF-5Oz" firstAttribute="trailing" secondItem="h1M-n4-ATw" secondAttribute="trailing" id="1r8-e5-tOl"/>
+                            <constraint firstItem="5Iv-fF-5Oz" firstAttribute="top" secondItem="h1M-n4-ATw" secondAttribute="top" id="9AV-B2-shK"/>
+                            <constraint firstItem="5Iv-fF-5Oz" firstAttribute="bottom" secondItem="h1M-n4-ATw" secondAttribute="bottom" id="Xfb-ge-XV9"/>
+                            <constraint firstItem="5Iv-fF-5Oz" firstAttribute="leading" secondItem="h1M-n4-ATw" secondAttribute="leading" id="gA8-Ta-JgW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Football League" id="fvi-jt-bxf"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Iv-fF-5Oz" id="TJN-Xt-uOJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAq-yQ-rih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="-399.10714285714283"/>
+        </scene>
+        <!--Flashy Tab Bar Controller-->
+        <scene sceneID="bwO-3a-WhA">
+            <objects>
+                <tabBarController id="fqJ-f6-6Q6" customClass="CBFlashyTabBarController" customModule="FootballLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fms-SD-JPS" customClass="MainTB" customModule="FootballLeague" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="lE3-RD-dls" kind="relationship" relationship="viewControllers" id="OZ6-RI-Utx"/>
+                        <segue destination="c5j-X5-YpP" kind="relationship" relationship="viewControllers" id="3Nk-AA-dG7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRx-1C-Xks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-706" y="26"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="CFw-8n-wbO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lE3-RD-dls" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="NIV-xS-Q36"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Mp-cG-ccr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.1764705882352941" green="0.28627450980392155" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dbh-bx-gkG" kind="relationship" relationship="rootViewController" id="s30-tm-VxK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAI-NN-zQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="-399.10714285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="favorite" width="32" height="32"/>
+        <image name="home" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
