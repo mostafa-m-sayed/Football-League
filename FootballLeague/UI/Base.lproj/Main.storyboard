@@ -28,6 +28,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fmQ-95-qxi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="FavouritesVC"/>
                         <constraints>
                             <constraint firstItem="NYJ-tj-HRE" firstAttribute="top" secondItem="fmQ-95-qxi" secondAttribute="top" id="Ijt-pF-ErZ"/>
                             <constraint firstAttribute="bottom" secondItem="NYJ-tj-HRE" secondAttribute="bottom" id="SQ3-BC-n6l"/>
@@ -153,6 +154,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MHD-vk-uWZ"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="TeamVC"/>
                         <constraints>
                             <constraint firstItem="mMp-WZ-Adk" firstAttribute="top" secondItem="MHD-vk-uWZ" secondAttribute="top" id="26r-sk-qgo"/>
                             <constraint firstItem="MHD-vk-uWZ" firstAttribute="trailing" secondItem="9qv-6T-Jsb" secondAttribute="trailing" id="BGG-bb-B4a"/>
