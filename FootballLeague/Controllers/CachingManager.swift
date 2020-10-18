@@ -15,15 +15,18 @@ class FastCache {
 
     enum Types {
         static var allCases: [Types] {
-            return [.competetion]
+            return [.competetion, .team]
         }
 
         case competetion
+        case team
 
         func getProperties() -> CacheProperties {
             switch self {
                 case .competetion:
-                return CacheProperties(directory: "/competetion/", limit: 100)
+                    return CacheProperties(directory: "/competetion/", limit: 100)
+                case .team:
+                    return CacheProperties(directory: "/team/", limit: 100)
             }
         }
     }

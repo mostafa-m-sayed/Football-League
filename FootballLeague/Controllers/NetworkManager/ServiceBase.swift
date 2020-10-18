@@ -8,5 +8,6 @@
 import Foundation
 struct ServiceBase {
     static let baseUrl = "http://api.football-data.org/v2/"
-    static let CompetitionTeams  = baseUrl + "competitions/"
+    static let CompetitionTeams = baseUrl + "competitions/"
+    static let team = baseUrl + "teams/"
 }

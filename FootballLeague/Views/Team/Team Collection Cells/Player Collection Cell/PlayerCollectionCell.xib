@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlayerCollectionCell" customModule="FootballLeague" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpV-Jo-OXG" customClass="CardView" customModule="FootballLeague" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="150" height="170"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="football-shirt" translatesAutoresizingMaskIntoConstraints="NO" id="Ec9-YX-u51">
+                                <rect key="frame" x="50" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cA3-Du-p9x"/>
+                                    <constraint firstAttribute="height" constant="50" id="fnq-rw-OHs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-tH-S8M">
+                                <rect key="frame" x="69.5" y="25" width="11" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.1764705882" green="0.28627450980000002" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-2e-IeG">
+                                <rect key="frame" x="55.5" y="68" width="39" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" name="Main"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iwm-eh-j7c">
+                                <rect key="frame" x="5" y="96" width="140" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nv-NE-aKF">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKr-nf-3qw">
+                                        <rect key="frame" x="0.0" y="23" width="140" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9h-VO-QnX">
+                                        <rect key="frame" x="0.0" y="46" width="140" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iwm-eh-j7c" firstAttribute="top" secondItem="g3f-2e-IeG" secondAttribute="bottom" constant="10" id="40j-Fg-DZI"/>
+                            <constraint firstItem="g3f-2e-IeG" firstAttribute="centerX" secondItem="VpV-Jo-OXG" secondAttribute="centerX" id="4R4-2D-RTk"/>
+                            <constraint firstItem="g3f-2e-IeG" firstAttribute="top" secondItem="Ec9-YX-u51" secondAttribute="bottom" constant="8" symbolic="YES" id="CQI-Vv-nzx"/>
+                            <constraint firstItem="iwm-eh-j7c" firstAttribute="leading" secondItem="VpV-Jo-OXG" secondAttribute="leading" constant="5" id="O4d-rV-qY0"/>
+                            <constraint firstItem="bTh-tH-S8M" firstAttribute="centerY" secondItem="Ec9-YX-u51" secondAttribute="centerY" id="PG3-aP-250"/>
+                            <constraint firstAttribute="trailing" secondItem="iwm-eh-j7c" secondAttribute="trailing" constant="5" id="Vbr-aD-NDb"/>
+                            <constraint firstItem="bTh-tH-S8M" firstAttribute="centerX" secondItem="Ec9-YX-u51" secondAttribute="centerX" id="b3y-5g-pRt"/>
+                            <constraint firstItem="Ec9-YX-u51" firstAttribute="top" secondItem="VpV-Jo-OXG" secondAttribute="top" constant="10" id="ccP-PQ-ln7"/>
+                            <constraint firstItem="Ec9-YX-u51" firstAttribute="centerX" secondItem="VpV-Jo-OXG" secondAttribute="centerX" id="dcw-Yc-Of5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="VpV-Jo-OXG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="5hN-aI-cLZ"/>
+                <constraint firstAttribute="bottom" secondItem="VpV-Jo-OXG" secondAttribute="bottom" constant="10" id="7SY-hK-fIi"/>
+                <constraint firstAttribute="trailing" secondItem="VpV-Jo-OXG" secondAttribute="trailing" constant="10" id="Kmi-t5-juD"/>
+                <constraint firstItem="VpV-Jo-OXG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ayW-Wh-BBy"/>
+            </constraints>
+            <size key="customSize" width="221" height="315"/>
+            <connections>
+                <outlet property="birthdayLabel" destination="yKr-nf-3qw" id="Vt3-qC-6Py"/>
+                <outlet property="containerView" destination="VpV-Jo-OXG" id="XB5-ZD-01K"/>
+                <outlet property="nameLabel" destination="g3f-2e-IeG" id="8Yk-Vu-x88"/>
+                <outlet property="nationalityLabel" destination="K9h-VO-QnX" id="zq5-AT-xdK"/>
+                <outlet property="playerNumberLabel" destination="bTh-tH-S8M" id="l1Q-qh-T9h"/>
+                <outlet property="positionLabel" destination="5Nv-NE-aKF" id="iQC-1S-YBV"/>
+            </connections>
+            <point key="canvasLocation" x="76.811594202898561" y="141.29464285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="football-shirt" width="512" height="512"/>
+        <namedColor name="Main">
+            <color red="0.17647058823529413" green="0.28627450980392155" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

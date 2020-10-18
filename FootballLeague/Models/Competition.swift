@@ -7,10 +7,9 @@
 
 import Foundation
 struct Competition: Codable {
-    var id:Int?
-    var name:String?
-    var code:String?
-    var plane:String?
-    var area:Area?
-    var lastUpdated:String?
+    var id: Int?
+    var name: String?
+    var code: String?
+    var plan: String?
+    var area: Area?
 }

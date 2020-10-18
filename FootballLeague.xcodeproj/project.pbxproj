@@ -10,6 +10,16 @@
 		0669C5AD253C93C200FA7BA9 /* FavouriteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C5AC253C93C200FA7BA9 /* FavouriteVM.swift */; };
 		0669C5D3253C9B9E00FA7BA9 /* NavControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C5D2253C9B9E00FA7BA9 /* NavControllerExt.swift */; };
 		0669C5D8253CA30500FA7BA9 /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C5D7253CA30500FA7BA9 /* CachingManager.swift */; };
+		0669C5E6253CCA5300FA7BA9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0669C5E5253CCA5300FA7BA9 /* Colors.xcassets */; };
+		0669C5EB253CCBC100FA7BA9 /* TeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C5EA253CCBC100FA7BA9 /* TeamVC.swift */; };
+		0669C5F4253CCF6900FA7BA9 /* CompetetionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C5F2253CCF6900FA7BA9 /* CompetetionCollectionCell.swift */; };
+		0669C5F5253CCF6900FA7BA9 /* CompetetionCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0669C5F3253CCF6900FA7BA9 /* CompetetionCollectionCell.xib */; };
+		0669C5FD253CD31500FA7BA9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C5FC253CD31500FA7BA9 /* Player.swift */; };
+		0669C602253CD3A100FA7BA9 /* PlayerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C601253CD3A100FA7BA9 /* PlayerVM.swift */; };
+		0669C607253CD4FD00FA7BA9 /* CompetetionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C606253CD4FD00FA7BA9 /* CompetetionVM.swift */; };
+		0669C60C253CD55800FA7BA9 /* AreaVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C60B253CD55800FA7BA9 /* AreaVM.swift */; };
+		0669C613253CDCE100FA7BA9 /* PlayerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669C611253CDCE100FA7BA9 /* PlayerCollectionCell.swift */; };
+		0669C614253CDCE100FA7BA9 /* PlayerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0669C612253CDCE100FA7BA9 /* PlayerCollectionCell.xib */; };
 		06FC5FF7253BC42700286937 /* FavouritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FC5FF6253BC42700286937 /* FavouritesVC.swift */; };
 		27001FC7253AD6820064FF1C /* CodableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27001FC6253AD6820064FF1C /* CodableExt.swift */; };
 		277F7B90253A5A34009B1E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F7B8F253A5A34009B1E7C /* AppDelegate.swift */; };
@@ -65,6 +75,16 @@
 		0669C5AC253C93C200FA7BA9 /* FavouriteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVM.swift; sourceTree = "<group>"; };
 		0669C5D2253C9B9E00FA7BA9 /* NavControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavControllerExt.swift; sourceTree = "<group>"; };
 		0669C5D7253CA30500FA7BA9 /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
+		0669C5E5253CCA5300FA7BA9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0669C5EA253CCBC100FA7BA9 /* TeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamVC.swift; sourceTree = "<group>"; };
+		0669C5F2253CCF6900FA7BA9 /* CompetetionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetetionCollectionCell.swift; sourceTree = "<group>"; };
+		0669C5F3253CCF6900FA7BA9 /* CompetetionCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompetetionCollectionCell.xib; sourceTree = "<group>"; };
+		0669C5FC253CD31500FA7BA9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0669C601253CD3A100FA7BA9 /* PlayerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVM.swift; sourceTree = "<group>"; };
+		0669C606253CD4FD00FA7BA9 /* CompetetionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetetionVM.swift; sourceTree = "<group>"; };
+		0669C60B253CD55800FA7BA9 /* AreaVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaVM.swift; sourceTree = "<group>"; };
+		0669C611253CDCE100FA7BA9 /* PlayerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionCell.swift; sourceTree = "<group>"; };
+		0669C612253CDCE100FA7BA9 /* PlayerCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCollectionCell.xib; sourceTree = "<group>"; };
 		06FC5FF6253BC42700286937 /* FavouritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesVC.swift; sourceTree = "<group>"; };
 		27001FC6253AD6820064FF1C /* CodableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableExt.swift; sourceTree = "<group>"; };
 		277F7B8C253A5A34009B1E7C /* FootballLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +153,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0669C5EF253CCF0B00FA7BA9 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				0669C5F0253CCF2E00FA7BA9 /* Team Collection Cells */,
+				0669C5EA253CCBC100FA7BA9 /* TeamVC.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		0669C5F0253CCF2E00FA7BA9 /* Team Collection Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0669C610253CDCC600FA7BA9 /* Player Collection Cell */,
+				0669C5F1253CCF3D00FA7BA9 /* Competetion Collection Cell */,
+			);
+			path = "Team Collection Cells";
+			sourceTree = "<group>";
+		};
+		0669C5F1253CCF3D00FA7BA9 /* Competetion Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0669C5F2253CCF6900FA7BA9 /* CompetetionCollectionCell.swift */,
+				0669C5F3253CCF6900FA7BA9 /* CompetetionCollectionCell.xib */,
+			);
+			path = "Competetion Collection Cell";
+			sourceTree = "<group>";
+		};
+		0669C610253CDCC600FA7BA9 /* Player Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0669C611253CDCE100FA7BA9 /* PlayerCollectionCell.swift */,
+				0669C612253CDCE100FA7BA9 /* PlayerCollectionCell.xib */,
+			);
+			path = "Player Collection Cell";
+			sourceTree = "<group>";
+		};
 		06FC5FF2253BC39000286937 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +287,7 @@
 				277F7CFF253A8C74009B1E7C /* MainTB.swift */,
 				277F7D05253A9225009B1E7C /* Home */,
 				06FC5FF5253BC40B00286937 /* Favourites */,
+				0669C5EF253CCF0B00FA7BA9 /* Team */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +300,7 @@
 				277F7CA5253A7251009B1E7C /* Season.swift */,
 				277F7CAA253A73B8009B1E7C /* Competition.swift */,
 				277F7CAF253A7506009B1E7C /* CompetitionTeams.swift */,
+				0669C5FC253CD31500FA7BA9 /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +311,9 @@
 				277F7C9A253A68C5009B1E7C /* TeamVM.swift */,
 				277F7CBA253A78BE009B1E7C /* CompetitionTeamsVM.swift */,
 				0669C5AC253C93C200FA7BA9 /* FavouriteVM.swift */,
+				0669C601253CD3A100FA7BA9 /* PlayerVM.swift */,
+				0669C606253CD4FD00FA7BA9 /* CompetetionVM.swift */,
+				0669C60B253CD55800FA7BA9 /* AreaVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -262,6 +323,7 @@
 			children = (
 				06FC5FF2253BC39000286937 /* Libraries */,
 				277F7B98253A5A3A009B1E7C /* Assets.xcassets */,
+				0669C5E5253CCA5300FA7BA9 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -447,10 +509,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0669C5E6253CCA5300FA7BA9 /* Colors.xcassets in Resources */,
 				277F7B9C253A5A3A009B1E7C /* LaunchScreen.storyboard in Resources */,
 				277F7B99253A5A3A009B1E7C /* Assets.xcassets in Resources */,
 				277F7D0A253A93D7009B1E7C /* LeagueCell.xib in Resources */,
 				277F7B97253A5A34009B1E7C /* Main.storyboard in Resources */,
+				0669C614253CDCE100FA7BA9 /* PlayerCollectionCell.xib in Resources */,
+				0669C5F5253CCF6900FA7BA9 /* CompetetionCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,25 +585,32 @@
 				277F7CA6253A7251009B1E7C /* Season.swift in Sources */,
 				277F7B94253A5A34009B1E7C /* HomeVC.swift in Sources */,
 				277F7CB0253A7506009B1E7C /* CompetitionTeams.swift in Sources */,
+				0669C60C253CD55800FA7BA9 /* AreaVM.swift in Sources */,
 				277F7CF3253A8A9E009B1E7C /* CBFlashyTabBarController.swift in Sources */,
 				277F7D12253A9412009B1E7C /* ViewExt.swift in Sources */,
 				277F7CF6253A8A9E009B1E7C /* CBTabItemDeselectAnimation.swift in Sources */,
 				06FC5FF7253BC42700286937 /* FavouritesVC.swift in Sources */,
+				0669C613253CDCE100FA7BA9 /* PlayerCollectionCell.swift in Sources */,
 				277F7CAB253A73B8009B1E7C /* Competition.swift in Sources */,
 				277F7D00253A8C74009B1E7C /* MainTB.swift in Sources */,
 				277F7CA0253A6D8A009B1E7C /* Area.swift in Sources */,
 				277F7CF1253A8A9E009B1E7C /* CBTabItemBasicAnimation.swift in Sources */,
 				277F7C9B253A68C5009B1E7C /* TeamVM.swift in Sources */,
 				0669C5AD253C93C200FA7BA9 /* FavouriteVM.swift in Sources */,
+				0669C5FD253CD31500FA7BA9 /* Player.swift in Sources */,
+				0669C5EB253CCBC100FA7BA9 /* TeamVC.swift in Sources */,
 				277F7C8E253A6796009B1E7C /* ColorExt.swift in Sources */,
 				277F7B90253A5A34009B1E7C /* AppDelegate.swift in Sources */,
 				277F7CF2253A8A9E009B1E7C /* CBFlashyTabBar.swift in Sources */,
+				0669C5F4253CCF6900FA7BA9 /* CompetetionCollectionCell.swift in Sources */,
 				0669C5D3253C9B9E00FA7BA9 /* NavControllerExt.swift in Sources */,
 				277F7CFB253A8B1D009B1E7C /* CBTabItemSelectAnimation.swift in Sources */,
 				277F7CE3253A7D0B009B1E7C /* ServiceBase.swift in Sources */,
 				277F7C96253A6868009B1E7C /* Team.swift in Sources */,
 				277F7CBB253A78BE009B1E7C /* CompetitionTeamsVM.swift in Sources */,
 				277F7D40253A94DA009B1E7C /* CardView.swift in Sources */,
+				0669C607253CD4FD00FA7BA9 /* CompetetionVM.swift in Sources */,
+				0669C602253CD3A100FA7BA9 /* PlayerVM.swift in Sources */,
 				277F7CF4253A8A9E009B1E7C /* CBTabItemAnimation.swift in Sources */,
 				277F7CF5253A8A9E009B1E7C /* CBTabBarButton.swift in Sources */,
 				277F7D09253A93D7009B1E7C /* LeagueCell.swift in Sources */,

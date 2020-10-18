@@ -7,7 +7,6 @@
 
 import Foundation
 struct Area: Codable {
-
     var id: Int?
     var name: String?
 }

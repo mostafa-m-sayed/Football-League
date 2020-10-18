@@ -8,8 +8,8 @@
 import Foundation
 struct CompetitionTeams: Codable {
     var count:Int?
-    var competition:Competition?
+    var competition: Competition?
     var season: Season?
-    var teams:[Team]?
+    var teams: [Team]?
     
 }

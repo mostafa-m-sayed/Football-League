@@ -22,4 +22,6 @@ struct Team: Codable {
     var clubColors: String?
     var venue: String?
     var lastUpdated: String?
+    var activeCompetitions: [Competition]?
+    var squad: [Player]?
 }

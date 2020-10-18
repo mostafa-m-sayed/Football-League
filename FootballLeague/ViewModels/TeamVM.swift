@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 struct TeamVM {
     var team: Team
@@ -43,7 +44,7 @@ struct TeamVM {
     var founded: Int {
         return team.founded ?? 0
     }
-
+    
     var clubColors: [UIColor] {
         guard let colorNames = team.clubColors else { return []}
         var colors = [UIColor]()
@@ -53,16 +54,50 @@ struct TeamVM {
         }
         return colors
     }
+    
     var venue: String {
         return team.venue ?? "--"
     }
-    var lastUpdated: String {
-        return team.lastUpdated ?? ""
+    
+    var players: [PlayerVM] {
+        guard let players = team.squad else { return []}
+        return players.map { PlayerVM(player: $0)}
     }
-
+    
+    var activeCompetetion: [CompetetionVM] {
+        guard let competetion = team.activeCompetitions else { return []}
+        return  competetion.map {CompetetionVM(competetion: $0)} 
+    }
+    
     var isFavourite: Bool {
         return TeamVM.getFavourites().contains {
             $0.id == self.id
+        }
+    }
+    
+    func getteam(teamID: String, completion: @escaping (_ team: TeamVM?, _ error: String?) -> Void) {
+        let header: HTTPHeaders  = ["X-Auth-Token": "eaab73f7a0cf4caca41e99306a4e04af"]
+        let url = "\(ServiceBase.team)\(teamID)"
+        
+        if let data = FastCache(type: .team).get(url: url) {
+            if let team: Team = data.getObject() {
+                completion(TeamVM(team: team), nil)
+            }
+        }
+        
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
+            print(response.result)
+            switch response.result {
+                case .success(let value):
+                    if let val = value as? NSDictionary {
+                        if let team: Team = val.getObject() {
+                            completion(TeamVM(team: team), nil)
+                            FastCache(type: .team).save(response: val, url: url)
+                        }
+                    }
+                case.failure(let error):
+                    print(error)
+            }
         }
     }
     
@@ -74,7 +109,7 @@ struct TeamVM {
             return [TeamVM]()
         }
     }
-
+    
     func addToFavourites() {
         if var teams: [Team] = UserDefaults.standard.getObject(key: "favourites") {
             if teams.firstIndex(where: { (item) -> Bool in
@@ -90,12 +125,12 @@ struct TeamVM {
             UserDefaults.standard.saveObject(rawData: teams, forKey: "favourites")
         }
     }
-
+    
     func removeFavourite() {
         if var teams: [Team] = UserDefaults.standard.getObject(key: "favourites") {
             if let index = teams.firstIndex(where: { (item) -> Bool in
                 item.id == self.id
-          }) {
+            }) {
                 teams.remove(at: index)
                 UserDefaults.standard.saveObject(rawData: teams, forKey: "favourites")
             }

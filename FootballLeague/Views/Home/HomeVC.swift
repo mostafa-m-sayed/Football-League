@@ -57,6 +57,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let nextVC = storyboard?.instantiateViewController(identifier: "TeamVC") as! TeamVC
+        if let competiton = competiton {
+            nextVC.teamId = competiton.teams[indexPath.row].id
+        }
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }
