@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
 struct TeamVM {
     var team: Team
     var id: Int {
@@ -42,8 +44,14 @@ struct TeamVM {
         return team.founded ?? 0
     }
 
-    var clubColors: String {
-        return team.clubColors ?? ""
+    var clubColors: [UIColor] {
+        guard let colorNames = team.clubColors else { return []}
+        var colors = [UIColor]()
+        let splittedColors = colorNames.split(separator: Character("/"))
+        for color in splittedColors {
+            colors.append(UIColor.getColorBy(name: color.trimmingCharacters(in: .whitespaces)))
+        }
+        return colors
     }
     var venue: String {
         return team.venue ?? "--"
