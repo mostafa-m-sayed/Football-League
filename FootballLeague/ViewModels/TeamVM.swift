@@ -51,4 +51,46 @@ struct TeamVM {
     var lastUpdated: String {
         return team.lastUpdated ?? ""
     }
+
+    var isFavourite: Bool {
+        return TeamVM.getFavourites().contains {
+            $0.id == self.id
+        }
+    }
+    
+    static func getFavourites() -> [TeamVM] {
+        if let favourites: [Team] = UserDefaults.standard.getObject(key: "favourites") {
+            return favourites.map { TeamVM(team: $0) }
+        }
+        else {
+            return [TeamVM]()
+        }
+    }
+
+    func addToFavourites() {
+        if var teams: [Team] = UserDefaults.standard.getObject(key: "favourites") {
+            if teams.firstIndex(where: { (item) -> Bool in
+                item.id == self.id
+            }) != nil {
+                return
+            }
+            teams.append(self.team)
+            UserDefaults.standard.saveObject(rawData: teams, forKey: "favourites")
+        } else {
+            var teams = [Team]()
+            teams.append(self.team)
+            UserDefaults.standard.saveObject(rawData: teams, forKey: "favourites")
+        }
+    }
+
+    func removeFavourite() {
+        if var teams: [Team] = UserDefaults.standard.getObject(key: "favourites") {
+            if let index = teams.firstIndex(where: { (item) -> Bool in
+                item.id == self.id
+          }) {
+                teams.remove(at: index)
+                UserDefaults.standard.saveObject(rawData: teams, forKey: "favourites")
+            }
+        }
+    }
 }

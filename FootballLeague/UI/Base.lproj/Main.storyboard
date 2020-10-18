@@ -8,21 +8,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favourit-->
+        <!--Favourites-->
         <scene sceneID="xnY-3Z-oBv">
             <objects>
-                <viewController id="c5j-X5-YpP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavouritesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c5j-X5-YpP" customClass="FavouritesVC" customModule="FootballLeague" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2cg-Tf-MBm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NYJ-tj-HRE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c5j-X5-YpP" id="t5i-DL-aF9"/>
+                                    <outlet property="delegate" destination="c5j-X5-YpP" id="PME-hn-RMS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fmQ-95-qxi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NYJ-tj-HRE" firstAttribute="top" secondItem="fmQ-95-qxi" secondAttribute="top" id="Ijt-pF-ErZ"/>
+                            <constraint firstAttribute="bottom" secondItem="NYJ-tj-HRE" secondAttribute="bottom" id="SQ3-BC-n6l"/>
+                            <constraint firstItem="NYJ-tj-HRE" firstAttribute="leading" secondItem="2cg-Tf-MBm" secondAttribute="leading" id="Xg8-Nj-snI"/>
+                            <constraint firstItem="fmQ-95-qxi" firstAttribute="trailing" secondItem="NYJ-tj-HRE" secondAttribute="trailing" id="h4Z-nk-MTK"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favourit" image="favorite" id="ptS-hT-4bK"/>
+                    <navigationItem key="navigationItem" title="Favourites" id="ZXP-IB-Q0c"/>
+                    <connections>
+                        <outlet property="tableView" destination="NYJ-tj-HRE" id="cUG-y2-zPt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qew-Ja-hgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="329"/>
+            <point key="canvasLocation" x="1091.304347826087" y="328.79464285714283"/>
         </scene>
         <!--Football League-->
         <scene sceneID="U23-7z-Nmz">
@@ -35,6 +54,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Iv-fF-5Oz">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dbh-bx-gkG" id="cfK-Go-xaw"/>
+                                    <outlet property="delegate" destination="dbh-bx-gkG" id="6mT-0g-pnY"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h1M-n4-ATw"/>
@@ -71,7 +94,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="lE3-RD-dls" kind="relationship" relationship="viewControllers" id="OZ6-RI-Utx"/>
-                        <segue destination="c5j-X5-YpP" kind="relationship" relationship="viewControllers" id="3Nk-AA-dG7"/>
+                        <segue destination="Jyt-Xk-vyC" kind="relationship" relationship="viewControllers" id="06M-kH-5zM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRx-1C-Xks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,6 +124,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAI-NN-zQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="179.71014492753625" y="-399.10714285714283"/>
+        </scene>
+        <!--Favourites-->
+        <scene sceneID="PeD-Km-RPr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jyt-Xk-vyC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favourites" image="favorite" id="N99-tO-22V"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f1K-q1-HFt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.1764705882" green="0.28627450980000002" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c5j-X5-YpP" kind="relationship" relationship="rootViewController" id="U73-8O-55T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ttp-q7-rg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="329"/>
         </scene>
     </scenes>
     <resources>

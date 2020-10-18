@@ -6,6 +6,6 @@ target 'FootballLeague' do
   use_frameworks!
 
   pod 'Alamofire'
-
+  pod "Spruce"
   end
 

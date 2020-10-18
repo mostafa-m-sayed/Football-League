@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.2.1)
+  - Spruce (2.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Spruce
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Spruce
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Spruce: 8456e4ab61ec6fd045e77dfcf07916e2e89f24d9
+
+PODFILE CHECKSUM: 8610e52eaff6ed05de5e349ae509752e1dc3a14d
+
+COCOAPODS: 1.9.3
